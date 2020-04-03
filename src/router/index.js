@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import LineChartPage from "../views/LineChartPage.vue";
+import BarChartPage from "../views/BarChartPage.vue";
 
 Vue.use(VueRouter);
 
@@ -18,6 +20,16 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/chart",
+    name: "ChartPage",
+    component: LineChartPage
+  },
+  {
+    path: "/bar-chart",
+    name: "BarChartPage",
+    component: BarChartPage
   }
 ];
 
